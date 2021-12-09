@@ -22,8 +22,8 @@ An automated system to create an environment for plant growth based on desired s
 
 ## Required Libraries and API keys
 
-Since this project utilizes python make sure to run the following commands:
-Make sure to install npm and node.js
+Since this project utilizes python make sure to run the following commands: </br>
+Make sure to install npm and node.js </br>
 
 ` sudo apt-get update ` </br>
 ` apt-get upgrade ` </br>
@@ -31,21 +31,21 @@ Make sure to install npm and node.js
 ` npm install twilio-cli -g `</br>
 ` sudo apt-get install libsecret-1-dev`</br>
 
-Sign up for a Twilio account (get a phone number and API keys)
-Setup smart plugs with internet network and name them "Smart Heater" and "Smart Humidifier" and plug in those actuators accordingly.
-Make sure RPi has I2C communication enabled.
+Sign up for a Twilio account (get a phone number and API keys) </br>
+Setup smart plugs with internet network and name them "Smart Heater" and "Smart Humidifier" and plug in those actuators accordingly. </br>
+Make sure RPi has I2C communication enabled. </br>
 
 ## Software Setup
 In toggle_smartplug.py add your Kasa username and password for the smart plugs.
 In parse_send_data.py add your TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and the source and destination phone with the area code (e.g. +143248412)
 
 ## Hardware setup
-Make sure both soil sensors have different addresses (0x36 and 0x37).
-Setup LCD display as shown in: https://www.mbtechworks.com/projects/drive-an-lcd-16x2-display-with-raspberry-pi.html
-Setup DHT sensors one in GPIO16 and the other in GPIO20
-Setup Soil humidity sensors on GPIO3 (SDA) and GPIO4 (SCL)
-Setup in for relay module at GPIO21
-Connect camera and point at plant
+Make sure both soil sensors have different addresses (0x36 and 0x37). </br>
+Setup LCD display as shown in: https://www.mbtechworks.com/projects/drive-an-lcd-16x2-display-with-raspberry-pi.html </br>
+Setup DHT sensors one in GPIO16 and the other in GPIO20 </br>
+Setup Soil humidity sensors on GPIO3 (SDA) and GPIO4 (SCL) </br>
+Setup in for relay module at GPIO21 </br>
+Connect camera and point at plant </br>
 
 <p align="center" width="100%">
     <img max_width="100%" src="imgfolder/image1.png">
