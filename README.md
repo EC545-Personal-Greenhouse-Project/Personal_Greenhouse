@@ -51,7 +51,4 @@ Connect camera and point at plant
     <img max_width="100%" src="imgfolder/image1.png">
 </p>
 
-## Video
-<p align="center" width="100%">
-<video src='imgfolder/video1.mp4' width=480/>
-</p>
+Video can be found in the imgfolder.
