@@ -8,6 +8,7 @@ import math
 #sudo pip3 install Adafruit_DHT
 #DHT_SENSOR = dht.DHT11
 
+#if the difference between two measured values is higher than a certain threshold we assume that one of the two is faulty
     
 def read_air_values(dht_device, dht_device2,ptemp):
     '''reads values from humidity sensor and returns [temperature, humidity] values, temperature is in Farenheit'''
@@ -41,6 +42,7 @@ def read_air_values(dht_device, dht_device2,ptemp):
         
         if(abs(temperature - temperature2) > 2):
             print("one sensor faulty")
+            #if one of the two temperatures is out of a reasonable rane we assume it's faulty
             if temperature > MAX_TEMP:
                 at = temperature2
                 ah = humidity2
@@ -53,6 +55,8 @@ def read_air_values(dht_device, dht_device2,ptemp):
             elif temperature2 < MIN_TEMP:
                 at = temperature
                 ah = humidity
+            # if that is not the case we pick the one that changed more from the last measurement.
+            # Indeed we observed that sometimes the sensors measures the same value repetedly and take some time to adjust
             else:
                 if (abs(temperature - ptemp) > abs(temperature2 - ptemp)):
                     at = temperature
